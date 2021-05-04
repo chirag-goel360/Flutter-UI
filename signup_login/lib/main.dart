@@ -3,25 +3,23 @@ import 'package:flutter/material.dart';
 import 'package:wave/config.dart';
 import 'package:wave/wave.dart';
 
-void main(){
+void main() {
   runApp(
     MyApp(),
   );
 }
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'LoginHere',
-      home: signPage(),
+      home: SignPage(),
     );
   }
 }
 
 class LoginPage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +30,6 @@ class LoginPage extends StatelessWidget {
             child: RotatedBox(
               quarterTurns: 1,
               child: WaveWidget(
-                duration: 1,
                 config: CustomConfig(
                   gradients: [
                     [
@@ -169,8 +166,7 @@ class LoginPage extends StatelessWidget {
                           vertical: 16.0,
                         ),
                         color: Colors.pink,
-                        onPressed: (){
-                        },
+                        onPressed: () {},
                         elevation: 11,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
@@ -213,11 +209,13 @@ class LoginPage extends StatelessWidget {
                             "SignUp",
                           ),
                           textColor: Colors.indigo,
-                          onPressed: (){
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                              return signPage();
-                            },
-                            ),
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return SignPage();
+                                },
+                              ),
                             );
                           },
                         ),
@@ -234,8 +232,7 @@ class LoginPage extends StatelessWidget {
   }
 }
 
-class signPage extends StatelessWidget {
-
+class SignPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -420,8 +417,7 @@ class signPage extends StatelessWidget {
                           vertical: 16.0,
                         ),
                         color: Colors.pink,
-                        onPressed: (){
-                        },
+                        onPressed: () {},
                         elevation: 10,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
@@ -467,8 +463,7 @@ class signPage extends StatelessWidget {
                                 Radius.circular(40.0),
                               ),
                             ),
-                            onPressed: (){
-                            },
+                            onPressed: () {},
                           ),
                         ),
                         SizedBox(
@@ -486,8 +481,7 @@ class signPage extends StatelessWidget {
                                 Radius.circular(40.0),
                               ),
                             ),
-                            onPressed: (){
-                            },
+                            onPressed: () {},
                           ),
                         ),
                         SizedBox(
@@ -506,11 +500,13 @@ class signPage extends StatelessWidget {
                             "Login",
                           ),
                           textColor: Colors.indigo,
-                          onPressed: (){
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                              return LoginPage();
-                            },
-                            ),
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return LoginPage();
+                                },
+                              ),
                             );
                           },
                         ),
