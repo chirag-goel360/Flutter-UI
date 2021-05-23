@@ -161,18 +161,20 @@ class LoginPage extends StatelessWidget {
                     Container(
                       width: double.infinity,
                       padding: EdgeInsets.all(30.0),
-                      child: RaisedButton(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 16.0,
-                        ),
-                        color: Colors.pink,
-                        onPressed: () {},
-                        elevation: 11,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(40.0),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.symmetric(
+                            vertical: 16.0,
                           ),
+                          elevation: 11,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(40.0),
+                            ),
+                          ),
+                          primary: Colors.pink,
                         ),
+                        onPressed: () {},
                         child: Text(
                           "Login",
                           style: TextStyle(
@@ -204,11 +206,13 @@ class LoginPage extends StatelessWidget {
                         Text(
                           "Don't have an account",
                         ),
-                        FlatButton(
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            primary: Colors.indigo,
+                          ),
                           child: Text(
                             "SignUp",
                           ),
-                          textColor: Colors.indigo,
                           onPressed: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
@@ -412,18 +416,20 @@ class SignPage extends StatelessWidget {
                     Container(
                       width: double.infinity,
                       padding: EdgeInsets.all(30.0),
-                      child: RaisedButton(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 16.0,
-                        ),
-                        color: Colors.pink,
-                        onPressed: () {},
-                        elevation: 10,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(40.0),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.symmetric(
+                            vertical: 16.0,
+                          ),
+                          primary: Colors.pink,
+                          elevation: 10,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(40.0),
+                            ),
                           ),
                         ),
+                        onPressed: () {},
                         child: Text(
                           "SignUp",
                           style: TextStyle(
@@ -452,15 +458,17 @@ class SignPage extends StatelessWidget {
                           width: 20.0,
                         ),
                         Expanded(
-                          child: RaisedButton(
+                          child: ElevatedButton(
                             child: Text(
                               "Facebook",
                             ),
-                            textColor: Colors.white,
-                            color: Colors.blue,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(40.0),
+                            style: ElevatedButton.styleFrom(
+                              onPrimary: Colors.white,
+                              primary: Colors.blue,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(40.0),
+                                ),
                               ),
                             ),
                             onPressed: () {},
@@ -470,15 +478,17 @@ class SignPage extends StatelessWidget {
                           width: 10.0,
                         ),
                         Expanded(
-                          child: RaisedButton(
+                          child: ElevatedButton(
                             child: Text(
                               "Google",
                             ),
-                            textColor: Colors.white,
-                            color: Colors.blue,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(40.0),
+                            style: ElevatedButton.styleFrom(
+                              onPrimary: Colors.white,
+                              primary: Colors.blue,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(40.0),
+                                ),
                               ),
                             ),
                             onPressed: () {},
@@ -495,11 +505,13 @@ class SignPage extends StatelessWidget {
                         Text(
                           "Already have an account",
                         ),
-                        FlatButton(
+                        TextButton(
                           child: Text(
                             "Login",
                           ),
-                          textColor: Colors.indigo,
+                          style: TextButton.styleFrom(
+                            primary: Colors.indigo,
+                          ),
                           onPressed: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
